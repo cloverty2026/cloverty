@@ -47,7 +47,7 @@ body{background:var(--black);color:var(--white);font-family:'Noto Sans JP',sans-
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 
-.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(12,12,12,0.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05);transition:background 0.3s}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:#000000;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05);transition:background 0.3s}
 .header-inner{display:flex;align-items:center;gap:16px;padding:0 32px;height:64px;max-width:1400px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .brand-emblem{height:40px;width:auto;flex-shrink:0;display:block}
@@ -311,7 +311,7 @@ body{background:var(--black);color:var(--white);font-family:'Noto Sans JP',sans-
 .cta-note{margin-top:8px;font-size:12px;color:#999}
 
 /* ── FULL FOOTER ── */
-footer.footer-full{background:#080808;padding:56px 48px 36px;border-top:1px solid rgba(255,255,255,0.05)}
+footer.footer-full{background:#000000;padding:56px 48px 36px;border-top:1px solid rgba(255,255,255,0.05)}
 .footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
 .footer-brand-name{font-size:20px;font-weight:800;color:var(--white);display:block;margin-bottom:12px}
 .footer-tagline{font-size:13px;color:#999;line-height:1.9;margin-bottom:14px}
@@ -402,7 +402,7 @@ html{scroll-behavior:smooth}
 .sec{padding:80px 48px}.sec-inner{max-width:1200px;margin:0 auto}.sec-title{font-family:'Noto Sans JP',sans-serif;font-size:clamp(22px, 3.5vw, 44px);font-weight:700;line-height:1.1;margin-bottom:24px}.sec-title em{font-style:normal;color:var(--pink)}
 .coaches-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
 .coach-card{border:1px solid rgba(255,255,255,0.06);overflow:hidden;transition:border-color 0.2s,transform 0.2s}.coach-card:hover{border-color:rgba(232,112,154,0.3);transform:translateY(-4px)}
-.coach-photo{height:300px;background:linear-gradient(160deg,#1a1a1a,#111);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer}
+.coach-photo{aspect-ratio:1/1;height:auto;background:linear-gradient(160deg,#1a1a1a,#111);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer}
 .coach-photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform 0.4s}
 .coach-photo:hover img{transform:scale(1.04)}
 .coach-photo-upload{display:flex;flex-direction:column;align-items:center;gap:8px;color:#555;border:1px dashed rgba(255,255,255,0.08);width:100%;height:100%;justify-content:center;transition:border-color 0.2s,background 0.2s}
@@ -417,7 +417,7 @@ html{scroll-behavior:smooth}
 .philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
 .pg-item{padding:24px;background:var(--charcoal);border:1px solid rgba(255,255,255,0.06)}.pg-num{font-family:'Noto Sans JP';font-size:32px;color:var(--pink);line-height:1;margin-bottom:8px}.pg-title{font-size:13px;font-weight:700;margin-bottom:8px}.pg-
 .btn-primary{background:var(--pink);color:var(--black);padding:14px 36px;border-radius:2px;font-weight:700;font-size:14px;letter-spacing:2px;text-decoration:none;text-transform:uppercase;display:inline-block;transition:transform 0.2s}.btn-primary:hover{transform:translateY(-2px)}
-footer{background:#080808;padding:40px 48px;border-top:1px solid rgba(255,255,255,0.05)}.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}.footer-copy{font-size:12px;color:#555}.footer-nav{display:flex;gap:20px}.footer-nav a{color:#555;text-decoration:none;font-size:12px;transition:color 0.2s}.footer-nav a:hover{color:var(--white)}
+footer{background:#000000;padding:40px 48px;border-top:1px solid rgba(255,255,255,0.05)}.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}.footer-copy{font-size:12px;color:#555}.footer-nav{display:flex;gap:20px}.footer-nav a{color:#555;text-decoration:none;font-size:12px;transition:color 0.2s}.footer-nav a:hover{color:var(--white)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}
 /* Tablet */
 @media (max-width: 1024px) {
@@ -813,57 +813,61 @@ body { line-height: 1.8; }
     <h2 class="sec-title reveal">CLOVERTY FCを<em>支える</em><br>チーム。</h2>
     <div class="coaches-grid">
       <div class="coach-card reveal">
-        <div class="coach-photo"><div class="coach-placeholder">HEAD</div></div>
+        <div class="coach-photo"><img src="images/coaches/cloverty-headcoach_takumi.png" alt="代表コーチ 大多和 卓（タクミコーチ）" loading="lazy"></div>
         <div class="coach-info">
-          <div class="coach-role">Head Coach / 代表・運営責任者</div>
-          <div class="coach-name">代表コーチ</div>
+          <div class="coach-role">Head Coach / 代表・監督</div>
+          <div class="coach-name">大多和 卓<span style="font-size:14px;font-weight:400;color:#aaa;margin-left:8px">タクミコーチ</span></div>
           <div class="coach-career">
-            <div class="cc-section-title">経歴</div>
-            <ul class="cc-list"><li>指導歴・資格の詳細は順次掲載予定です</li></ul>
-          </div>
-          <div class="coach-philosophy">
-            <div class="cc-section-title">指導方針</div>
-            <div class="coach-bio">「指示待ちではなく、自分で考えてプレーできる選手を育てること」を信念にしています。失敗を恐れずチャレンジできる環境を大切にしています。</div>
-          </div>
-          <div class="coach-for-kids">
-            <div class="cc-section-title">こんな子に来てほしい</div>
+            <div class="cc-section-title">選手歴</div>
             <ul class="cc-list">
-              <li>サッカーを始めてみたい子</li>
-              <li>もっと上手くなりたい子</li>
-              <li>試合でプレーしたい子</li>
-              <li>失敗しても諦めずに挑戦できる子</li>
+              <li>清水商業高校 → 東京農業大学</li>
+              <li>SC鳥取（現ガイナーレ鳥取）→ 横河武蔵野FC → ガイナーレ鳥取</li>
             </ul>
           </div>
-          <div class="coach-to-parents surface-tint" style="padding:12px 16px;margin-top:12px">
-            <div class="cc-section-title">保護者の方へ</div>
-            <div class="coach-bio" style="color:#c0c0c0">初心者の子にも安心して参加してもらえるよう、できたことを積み重ねる指導を大切にしています。上手い・下手で判断せず、一人ひとりの成長を見ていきます。何でもお気軽にご相談ください。</div>
+          <div class="coach-career" style="margin-top:12px">
+            <div class="cc-section-title">指導歴</div>
+            <ul class="cc-list">
+              <li>パリ・サンジェルマンアカデミー ジャパン</li>
+              <li>DAIGO FOOTBALL SCHOOL</li>
+              <li>CLOVERTY SOCCER SCHOOL / FC（2026〜）</li>
+            </ul>
+          </div>
+          <div class="coach-to-parents surface-tint" style="padding:12px 16px;margin-top:16px">
+            <div class="cc-section-title">メッセージ</div>
+            <div class="coach-bio" style="color:#c0c0c0">
+              <p style="margin-bottom:8px">「サッカーは楽しい」と感じられることを何より大切にしています。上手い・下手で判断せず、一人ひとりの個性と成長を見ていきます。</p>
+              <p>自分で考え、自分で決めてプレーできる選手を育てることが信念です。ときにはユーモアも交えながら、お子さまと保護者の皆さまに寄り添い続けます。何でもお気軽にご相談ください。</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="coach-card reveal d1">
-        <div class="coach-photo"><div class="coach-placeholder">COACH</div></div>
+        <div class="coach-photo"><img src="images/coaches/cloverty-coach_yutaro.png" alt="コーチ 横山 優太郎（ユウタロウコーチ）" loading="lazy"></div>
         <div class="coach-info">
           <div class="coach-role">Coach / コーチ</div>
-          <div class="coach-name">コーチ</div>
+          <div class="coach-name">横山 優太郎<span style="font-size:14px;font-weight:400;color:#aaa;margin-left:8px">ユウタロウコーチ</span></div>
           <div class="coach-career">
-            <div class="cc-section-title">経歴</div>
-            <ul class="cc-list"><li>指導歴・資格の詳細は順次掲載予定です</li></ul>
-          </div>
-          <div class="coach-philosophy">
-            <div class="cc-section-title">指導方針</div>
-            <div class="coach-bio">選手の個性を尊重し、一人ひとりの「できた」を積み重ねることを大切にしています。</div>
-          </div>
-          <div class="coach-for-kids">
-            <div class="cc-section-title">こんな子に来てほしい</div>
+            <div class="cc-section-title">選手歴</div>
             <ul class="cc-list">
-              <li>サッカーが好きな子・好きになりたい子</li>
-              <li>仲間と一緒に成長したい子</li>
-              <li>自分のペースで上手くなりたい子</li>
+              <li>大宮アルディージャJr.Y → 流通経済大学附属柏高校 → 流通経済大学</li>
+              <li>アヴェントゥーラ川口</li>
             </ul>
           </div>
-          <div class="coach-to-parents surface-tint" style="padding:12px 16px;margin-top:12px">
-            <div class="cc-section-title">保護者の方へ</div>
-            <div class="coach-bio" style="color:#c0c0c0">お子さんの成長を一緒に見守っていきましょう。気になることはいつでもお声がけください。遠慮なくご相談いただけます。</div>
+          <div class="coach-career" style="margin-top:12px">
+            <div class="cc-section-title">指導歴</div>
+            <ul class="cc-list">
+              <li>アミスタSC</li>
+              <li>パリ・サンジェルマンアカデミー ジャパン</li>
+              <li>DAIGO FOOTBALL SCHOOL</li>
+              <li>CLOVERTY FC（2026〜）</li>
+            </ul>
+          </div>
+          <div class="coach-to-parents surface-tint" style="padding:12px 16px;margin-top:16px">
+            <div class="cc-section-title">メッセージ</div>
+            <div class="coach-bio" style="color:#c0c0c0">
+              <p style="margin-bottom:8px">まずサッカーを楽しむことを大切にしながら、「いつ・何を見るか」「良い判断をすること」をトレーニングと試合の中で自然に身につけられる指導を心がけます。</p>
+              <p>サッカーを通じて人としても成長できる環境を、子どもたちと一緒につくっていきます。</p>
+            </div>
           </div>
         </div>
       </div>
@@ -883,18 +887,7 @@ body { line-height: 1.8; }
   </div>
 </div>
 
-<!-- グループ写真 -->
-<div class="sec" style="padding-top:0">
-  <div class="sec-inner">
-    <span class="section-label reveal">Team Photo / チーム集合写真</span>
-    <div style="background:var(--charcoal);border:1px dashed rgba(255,255,255,0.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:300px;margin-top:16px;transition:border-color 0.2s;cursor:pointer" class="reveal"
-    onmouseover="this.style.borderColor='rgba(232,112,154,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
-      <div style="font-size:32px;opacity:0.2">📷</div>
-      <div style="font-size:11px;letter-spacing:2px;color:#b0b0b0;opacity:0.4;text-transform:uppercase">スタッフ・チーム集合写真</div>
-      <div style="font-size:10px;color:#b0b0b0;opacity:0.25">推奨 1200×500px（横長）</div>
-    </div>
-  </div>
-</div>
+
 <div class="coaches-cta">
   <a href="https://ig.me/m/cloverty_fc" target="_blank" rel="noopener noreferrer" class="btn-primary reveal">コーチに相談する</a>
 </div>
