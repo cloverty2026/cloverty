@@ -1199,3 +1199,98 @@ footer .footer-nav a:hover { color: #ffffff !important; }
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* ── Brand axis centered block ───────────────────────────── */
+.brand-axis-block{
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+.brand-axis-title{
+  margin-bottom: 24px;
+}
+.brand-axis-text{
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 2;
+  color: rgba(255,255,255,0.86);
+}
+.brand-axis-note{
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* ── Hero Instagram links ───────────────────────────────── */
+.hero-social{
+  margin-top: 14px;
+  animation: fadeUp 0.7s ease 0.34s both;
+}
+.hero-social-title{
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.hero-social-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.hero-social-link{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:999px;
+  background:rgba(255,255,255,0.04);
+  color:var(--white);
+  text-decoration:none;
+  font-size:13px;
+  line-height:1;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease;
+}
+.hero-social-link:hover{
+  transform:translateY(-1px);
+  border-color:rgba(232,112,154,0.45);
+  background:rgba(232,112,154,0.08);
+  color:var(--white);
+}
+.hero-social-link svg{
+  flex-shrink:0;
+  opacity:0.95;
+}
+
+@media (max-width: 768px){
+  .brand-axis-block{
+    max-width: 100%;
+  }
+  .brand-axis-text{
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .brand-axis-note{
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .hero-social{
+    margin-top: 12px;
+  }
+  .hero-social-title{
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  .hero-social-links{
+    gap:8px;
+  }
+  .hero-social-link{
+    font-size:12px;
+    padding:8px 10px;
+  }
+}
